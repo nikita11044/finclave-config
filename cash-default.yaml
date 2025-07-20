@@ -6,4 +6,4 @@ server:
   port: 8084
 
 feign:
-  account: http://localhost:8081
+  account: http://localhost:8091/account

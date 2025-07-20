@@ -3,11 +3,11 @@ spring:
     name: front
 
 feign:
-  account: http://localhost:8081
-  exchange: http://localhost:8083
-  cash: http://localhost:8084
-  transfer: http://localhost:8085
-  notification: http://localhost:8090
+  account: http://localhost:8091/account
+  exchange: http://localhost:8091/exchange
+  cash: http://localhost:8091/cash
+  transfer: http://localhost:8091/transfer
+  notification: http://localhost:8091/notification
 
 server:
   port: 8080
