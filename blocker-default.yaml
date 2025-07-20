@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: blocker
+
+server:
+  port: 8089
