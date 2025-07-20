@@ -25,5 +25,8 @@ spring:
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yaml
 
+feign:
+  notification: http://localhost:8090
+
 server:
   port: 8081
