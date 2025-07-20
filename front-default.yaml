@@ -7,6 +7,7 @@ feign:
   exchange: http://localhost:8083
   cash: http://localhost:8084
   transfer: http://localhost:8085
+  notification: http://localhost:8090
 
 server:
   port: 8080
