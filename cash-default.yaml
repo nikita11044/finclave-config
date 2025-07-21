@@ -23,9 +23,6 @@ spring:
 server:
   port: 8084
 
-feign:
-  account: http://localhost:8091/account
-
 eureka:
   client:
     serviceUrl:
