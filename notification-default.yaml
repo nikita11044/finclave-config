@@ -35,7 +35,7 @@ spring:
             keycloak:
               issuer-uri: http://localhost:9090/realms/finclave
           registration:
-            bankapp:
+            finclave:
               provider: keycloak
               authorizationGrantType: client_credentials
               client-id: finclave-client
