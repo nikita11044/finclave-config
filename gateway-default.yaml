@@ -34,6 +34,8 @@ spring:
                 - Path=/transfer/**
           default-filters:
             - StripPrefix=1
+    loadbalancer:
+      configurations: health-check
 
 server:
   port: 8091
