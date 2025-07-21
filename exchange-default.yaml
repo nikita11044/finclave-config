@@ -24,6 +24,24 @@ spring:
     open-in-view: false
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yaml
+  spring:
+    security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: http://localhost:9090/realms/finclave
+        client:
+          provider:
+            keycloak:
+              issuer-uri: http://localhost:9090/realms/finclave
+          registration:
+            bankapp:
+              provider: keycloak
+              authorizationGrantType: client_credentials
+              client-id: finclave-client
+              client-secret: Fdx84febgALBIuFdC1jLzSl6mT8PxJwa
+              scope: profile
+              clientAuthenticationMethod: client_secret_post
 
 server:
   port: 8083
