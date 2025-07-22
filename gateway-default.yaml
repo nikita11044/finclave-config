@@ -34,7 +34,7 @@ spring:
                 - Path=/transfer/**
           default-filters:
             - StripPrefix=1
-            - AddRequestHeader=Authorization
+            - AddRequestHeader=Authorization,
     loadbalancer:
       configurations: health-check
 
