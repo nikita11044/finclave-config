@@ -20,10 +20,10 @@ spring:
               uri: lb://exchange
               predicates:
                 - Path=/exchange/**
-            - id: exchange-generator
-              uri: lb://exchange-generator
+            - id: exchange-rate
+              uri: lb://exchange-rate
               predicates:
-                - Path=/exchange-generator/**
+                - Path=/exchange-rate/**
             - id: notification
               uri: lb://notification
               predicates:
