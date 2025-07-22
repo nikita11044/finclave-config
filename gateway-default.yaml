@@ -1,37 +1,39 @@
 spring:
   cloud:
     gateway:
-      routes:
-        - id: account
-          uri: lb://account
-          predicates:
-            - Path=/account/**
-        - id: blocker
-          uri: lb://blocker
-          predicates:
-            - Path=/blocker/**
-        - id: cash
-          uri: lb://cash
-          predicates:
-            - Path=/cash/**
-        - id: exchange
-          uri: lb://exchange
-          predicates:
-            - Path=/exchange/**
-        - id: exchange-rate
-          uri: lb://exchange-rate
-          predicates:
-            - Path=/exchange-rate/**
-        - id: notification
-          uri: lb://notification
-          predicates:
-            - Path=/notification/**
-        - id: transfer
-          uri: lb://transfer
-          predicates:
-            - Path=/transfer/**
-      default-filters:
-        - StripPrefix=1
+      server:
+        webflux:
+          routes:
+            - id: account
+              uri: lb://account
+              predicates:
+                - Path=/account/**
+            - id: blocker
+              uri: lb://blocker
+              predicates:
+                - Path=/blocker/**
+            - id: cash
+              uri: lb://cash
+              predicates:
+                - Path=/cash/**
+            - id: exchange
+              uri: lb://exchange
+              predicates:
+                - Path=/exchange/**
+            - id: exchange-rate
+              uri: lb://exchange-rate
+              predicates:
+                - Path=/exchange-rate/**
+            - id: notification
+              uri: lb://notification
+              predicates:
+                - Path=/notification/**
+            - id: transfer
+              uri: lb://transfer
+              predicates:
+                - Path=/transfer/**
+          default-filters:
+            - StripPrefix=1
     loadbalancer:
       configurations: health-check
 
